@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name = "teckforce" default="jar">
+
+<target name = "info" >
+<echo> info executed </echo>
+</target>
+
+<target name = "clean" depends="info" >
+<echo> clean executed </echo>
+</target>
+
+<target name = "compile" depends="clean" >
+<javac srcdir="./ant practise" destdir="ant practise"/>
+<echo> compile executed </echo>
+</target>
+
+<target name = "run" depends="compile">
+<java classname="Demo">
+<classpath path="ant practise"/>
+</java>
+<echo> run executed </echo>
+</target>
+
+<target name = "jar" depends="run">
+<echo> jar executed </echo>
+<mkdir dir="ant practise/jarfiles" />
+<jar destfile="ant practise/jarfiles/xyz.jar" basedir="./ant practise" />
+
+</target>
+
+
+</project>
