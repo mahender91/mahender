@@ -10,7 +10,7 @@
 </target>
 
 <target name = "compile" depends="clean" >
-<javac srcdir="./ant practise" destdir="ant practise"/>
+<javac srcdir="./java" destdir="java"/>
 <echo> compile executed </echo>
 </target>
 
@@ -23,8 +23,8 @@
 
 <target name = "jar" depends="run">
 <echo> jar executed </echo>
-<mkdir dir="ant practise/jarfiles" />
-<jar destfile="ant practise/jarfiles/xyz.jar" basedir="./ant practise" />
+<mkdir dir="java/jarfiles" />
+<jar destfile="java/jarfiles/xyz.jar" basedir="./java" />
 
 </target>
 
